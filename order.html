@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Atif BTech BiryaniWallah</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Order Page Title */
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+        }
+
+        /* Menu Section */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px 0;
+            padding: 0 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .menu-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .menu-item span {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff6347;
+        }
+
+        /* Order Form Section */
+        .order-form {
+            background-color: #fff;
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .order-form h2 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+        }
+
+        .order-form label {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .order-form input, .order-form select, .order-form button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            font-size: 1.2em;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .order-form button {
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid;
+        }
+
+        .order-form button:hover {
+            background-color: #e5533d;
+        }
+
+        /* Total Price */
+        .total-price {
+            text-align: center;
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 80%;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./order.html">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Order Your Favorite Biryani Now!</h1>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <!-- Biryani Item -->
+        <div class="menu-item">
+            <img src="biryani.jpg" alt="Biryani">
+            <h3>Signature Biryani</h3>
+            <p>Fragrant basmati rice cooked with tender chicken, spices, and saffron.</p>
+            <span>$12.99</span>
+        </div>
+
+        <!-- Pizza Item -->
+        <div class="menu-item">
+            <img src="./pizza.jpeg" alt="Pizza">
+            <h3>Delicious Pizza</h3>
+            <p>Hand-tossed crust topped with fresh vegetables and cheese.</p>
+            <span>$9.99</span>
+        </div>
+
+        <!-- Salad Item -->
+        <div class="menu-item">
+            <img src="salad.jpg" alt="Salad">
+            <h3>Fresh Caesar Salad</h3>
+            <p>Romaine lettuce, parmesan, croutons, and Caesar dressing.</p>
+            <span>$7.99</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="./roasted chicken.jpg" alt="Roasted Chicken">
+            <h3>Roasted Chicken</h3>
+            <p>Fresh Roasted Chicken with lemon</p>
+            <span>$5.99</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="./Chicken Korma.avif" alt="Korma">
+            <h3>Chicken Korma</h3>
+            <p>A truly versatile curry with a beautifully aromatic, delicately spiced and nutty flavou</p>
+            <span>$8.99</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="./Afghani Chicken Tikka.jpg" alt="Tikka">
+            <h3>Afghani Chicken Tikka</h3>
+            <p>Chicken marinated in a blend of spices and herbs along with cream and other aromatics, grilled to perfection, and served as an appetiser.</p>
+            <span>$6.99</span>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="item">Choose Your Dish</label>
+            <select id="item" required>
+                <option value="biryani">Signature Biryani - $12.99</option>
+                <option value="pizza">Delicious Pizza - $9.99</option>
+                <option value="salad">Fresh Caesar Salad - $4.99</option>
+                <option value="Tikka">Fresh Afghani Chicken Tikka - $6.99</option>
+                <option value="Korma"> Aromatic Chicken Korma - $8.99</option>
+                <option value="Roasted"> Roasted Chicken  - $5.99</option>
+                
+
+            </select>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" value="1" min="1" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Full Name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Your Address" required>
+             
+            <label for="address">Mobile No:</label>
+            <input type="text" id="address" placeholder="Number" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <div class="total-price" id="totalPrice">Total: $</div>
+    </section>
+
+    <script>
+         // JavaScript to update total price based on selected item and quantity
+         const itemSelect = document.getElementById('item');
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        const menuPrices = {
+            Roasted:5.99,
+            Korma:8.99,
+            Tikka: 6.99,
+            biryani: 12.99,
+            pizza: 9.99,
+            salad: 7.99
+                  
+        }
+
+        function updateTotalPrice() {
+            const selectedItem = itemSelect.value;
+            const quantity = parseInt(quantityInput.value);
+            const price = menuPrices[selectedItem];
+            const total = price * quantity;
+            totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        itemSelect.addEventListener('change', updateTotalPrice);
+        quantityInput.addEventListener('input', updateTotalPrice);
+
+        // Initial total price update
+        updateTotalPrice();
+
+        // Handle form submission (just a basic log for demo purposes)
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Order placed successfully!');
+        });
+    </script>
+
+</body>
+</html>
